@@ -1,0 +1,39 @@
+//subarray with given sum zero using hashing and prefix sum techinque 
+
+import java.util.*;
+
+public class sub_array_with_given_sum_zero {
+    public static boolean sub_Array(int a[]) {
+
+        int prefix_sum = 0;
+        Set<Integer> h = new HashSet<>();
+        for (int i = 0; i < a.length; i++) {
+            prefix_sum += a[i];
+            if (h.contains(prefix_sum)) {
+                return true;
+            } else {
+
+                h.add(prefix_sum);
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n;
+
+        System.out.println("enter the size of array");
+
+        n = sc.nextInt();
+        System.out.println("enter the " + n + " elements");
+        int a[] = new int[n];
+        for (int j = 0; j < a.length; j++) {
+            a[j] = sc.nextInt();
+        }
+
+        System.out.println(sub_Array(a));
+
+    }
+
+}
