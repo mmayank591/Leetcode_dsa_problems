@@ -1,0 +1,14 @@
+import java.io.*;
+class POT {
+	public static void main(String[] args)
+	{
+		int b = 81;
+		int a = 3;
+		double p = Math.log10(b)/ Math.log10(a);
+		if (p - (int)p == 0) {
+			System.out.println("YES");
+		}
+		else
+			System.out.println("NO");
+	}
+}
