@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Factorail_recursive {
+    public static void main(String args[])
+    {
+        int n;
+        int fa;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number = ");
+        n = sc.nextInt();
+        Factorail_recursive fr=new Factorail_recursive();
+        fa = fr.fact(n);
+        System.out.println("The factorial of given number is = " +fa);
+
+    }
+    int fact(int n)
+    {
+        if(n==1)
+        {
+            return 1;
+        }
+        else 
+        {
+            return n*fact(n-1);
+        }
+        
+    }
+}
