@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Greatest_common_factor {
+    public static void main(String args[])
+    {
+        int n1,n2;
+        int mini=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the first number = ");
+        n1=sc.nextInt();
+        System.out.println("Enter the second number = ");
+        n2=sc.nextInt();
+        if(n1<n2)
+        {
+            mini=n1;
+        }
+        else
+        {
+            mini=n2;
+        }
+        while(mini>0)
+        {
+            if(n1%mini==0&&n2%mini==0)
+            {
+                break;
+            }
+            mini--;
+        }
+    System.out.println("The greatest common factor of these two no.s are = " +mini);
+    }
+        
+
+    }
