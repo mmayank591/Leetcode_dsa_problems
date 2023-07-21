@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Optimized_trailing_zero {
+    public static void main(String args[])
+    {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number = ");
+        n=sc.nextInt();
+        int count = 0;
+        for(int i=5;i<=n;i=i*5)
+        {
+            count = count + (n/i);
+        }
+        System.out.println("The no. of trailing zeros in factorial are = " +count);
+    }
+}
