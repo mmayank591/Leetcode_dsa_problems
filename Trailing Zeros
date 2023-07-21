@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Trailing_Zeros_in_factorial {
+    public static void main(String args[])
+    {
+        int n;
+        int fact = 1;
+        int count = 0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number = ");
+        n=sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            fact = fact * i;
+        }
+        System.out.println("The factorial of given number is = " +fact);
+        while(fact % 10 == 0)
+        {
+            count++;
+            fact=fact/10;
+        }
+        System.out.println("The number of zeros in a factorial are = " +count);
+    }
+}
